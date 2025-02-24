@@ -5,7 +5,7 @@ import sys
 def main():
     port = 4443
     if len(sys.argv) >= 2:
-        port = sys.argv[1]
+        port = int(sys.argv[1])
     context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
     context.load_cert_chain(
         certfile="./cert.pem", 
